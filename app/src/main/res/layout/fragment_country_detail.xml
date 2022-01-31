@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="selectedCountry"
+            type="com.egeperk.kotlincountrylist.model.Country" />
+
+    </data>
+
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".view.CountryDetailFragment">
+
+
+        <ImageView
+            android:id="@+id/country_detail_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:minHeight="200dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:scaleType="fitCenter"
+            android:downloadUrl="@{selectedCountry.imageUrl}"
+            />
+
+        <TextView
+            android:id="@+id/country_name_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/country_detail_view"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="7dp"
+            android:text="@{selectedCountry.countryName}"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/country_capital_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/country_name_tv"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="7dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginEnd="7dp"
+            android:layout_marginBottom="7dp"
+            android:text="@{selectedCountry.countryCapital}"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/country_region_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/country_capital_tv"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="7dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginEnd="7dp"
+            android:layout_marginBottom="7dp"
+            android:text="@{selectedCountry.countryRegion}"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/country_language_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/country_region_tv"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="7dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginEnd="7dp"
+            android:layout_marginBottom="7dp"
+            android:text="@{selectedCountry.countryLanguage}"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/country_currency_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/country_language_tv"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="7dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginEnd="7dp"
+            android:layout_marginBottom="7dp"
+            android:text="@{selectedCountry.countryCurrency}"
+            android:textSize="16sp" />
+
+    </RelativeLayout>
+</layout>
